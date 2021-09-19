@@ -13,7 +13,7 @@ def display_board(board):
     print('   |   |')
     print('-----------')
 
-test_board = ['#','X','O','X','O','X','O','X','O','X']
+# test_board = ['#','X','O','X','O','X','O','X','O','X']
 # display_board(test_board)
 
 # Function to take player input
@@ -49,4 +49,5 @@ def win_check(board,mark):
     (board[7] == mark and board[5] == mark and board[3] == mark) or # diagonal
     (board[9] == mark and board[5] == mark and board[1] == mark)) # diagonal
 
-print(win_check(test_board,'X'))
+# print(win_check(test_board,'X'))
+
