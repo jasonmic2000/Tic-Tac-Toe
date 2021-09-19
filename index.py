@@ -1,3 +1,5 @@
+import random
+
 # Function to display the board
 def display_board(board):
     print('   |   |')
@@ -50,4 +52,23 @@ def win_check(board,mark):
     (board[9] == mark and board[5] == mark and board[1] == mark)) # diagonal
 
 # print(win_check(test_board,'X'))
+
+# Function to randomize first player
+def choose_first():
+    if random.randint(0, 1) == 0:
+        return 'Player 2'
+    else:
+        return 'Player 1'
+
+# Function to check if space is empty
+def space_check(board, position):
+    
+    return board[position] == ' '
+
+# Function to check if board is full
+def full_board_check(board):
+    for i in range(1,10):
+        if space_check(board, i):
+            return False
+    return True
 
